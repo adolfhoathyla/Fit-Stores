@@ -1,0 +1,26 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <div class="box text-left">
+		<h1><%= name %> Sugestão de Produto</h1>
+		<%= form_for(@product_suggestion) do |f| %>
+			<% @product_suggestion.errors.full_messages.each do |message| %>
+				<div class="alert alert-danger" role="alert">
+					<%= message %>
+				</div>
+			<% end %>
+			<div class="field">
+				<%= f.text_field :name, required: true, class:"form-control", placeholder: "Nome do suplemento" %>
+			</div>
+			<div class="field">
+				<%= f.text_field :brand, required: true, class:"form-control", placeholder: "Marca" %>
+			</div>
+			<div class="field">
+				<%= f.file_field :photo, required: true, placeholder: "Foto do suplemento"  %>
+			</div>
+			<div class="field">
+				<%= f.submit :Guardar, class:"btn be-red white" %>
+			</div>
+		<% end %>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <div class="box text-left">
+		<h1><%= name %> Suplemento</h1>
+		<%= form_for(@product) do |f| %>
+			<% @product.errors.full_messages.each do |message| %>
+				<div class="alert alert-danger" role="alert">
+					<%= message %>
+				</div>
+			<% end %>
+			<div class="field">
+				<%= f.text_field :name, required: true, class:"form-control", placeholder: "Nome do suplemento" %>
+			</div>
+			<div class="field">
+				<%= f.label :type_of_suplement, "Tipo do suplemento: " %>
+				<p/>
+				<%
+				type_of_suplements = ["Proteínas", "Hipercalóricos", "Termogênicos", "Aminoácidos", "Outros"]
+				%>
+        		<%= f.select :type_of_suplement, options_for_select(type_of_suplements, @product.type_of_suplement), {}, {class: "form-control"} %>
+			</div>
+			<div class="field">
+				<%= f.text_field :benefits, required: true, class:"form-control", placeholder: "Benefícios" %>
+			</div>
+			<div class="field">
+				<%= f.text_field :contraindication, required: true, class:"form-control", placeholder: "Contraindicações" %>
+			</div>
+			<div class="field">
+				<%= f.text_field :brand, required: true, class:"form-control", placeholder: "Marca" %>
+			</div>
+			<div class="field">
+				<%= f.label :type_of_state, "Tipo do estado: " %>
+				<p/>
+				<%
+				type_of_state = ["Pó", "Líquido", "Comprimido"]
+				%>
+        		<%= f.select :type_of_state, options_for_select(type_of_state, @product.type_of_state), {}, {class: "form-control", :onchange => "onClickTypeOfState()"} %>
+			</div>
+			<div class="field">
+				<%= f.text_field :weight, required: true, class:"form-control", placeholder: "Peso", type: "po" %>
+			</div>
+			<div class="field">
+				<%= f.text_area :desc, required: true, class:"form-control", placeholder: "Descrição" %>
+			</div>
+			<div class="field">
+				<%= f.file_field :photo, required: true, placeholder: "Foto do suplemento"  %>
+			</div>
+			<div class="field">
+				<%= f.submit :"Guardar", class:"btn be-red white" %>
+			</div>
+		<% end %>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <h1><strong>Detalhes do produto: <%= @product.name %></strong></h1>
+    <div class="box">
+      <div class="field">
+        <strong>Tipo:</strong>
+        <%= @product.type_of_suplement %>
+      </div>
+
+      <div class="field">
+        <strong>Descrição:</strong>
+        <%= @product.desc %>
+      </div>
+
+      <div class="field">
+        <strong>Benefícios:</strong>
+        <%= @product.benefits %>
+      </div>
+
+      <div class="field">
+        <strong>Contraindicações:</strong>
+        <%= @product.contraindication %>
+      </div>
+
+      <div class="field">
+        <strong>Marca:</strong>
+        <%= @product.brand %>
+      </div>
+
+      <div class="field">
+        <strong>Peso:</strong>
+        <%= @product.weight %>
+      </div>
+
+      <div class="field text">
+        <%= image_tag @product.photo.url(), size: "200" %>
+      </div>
+    </div>
+  </div>
+</div>
+

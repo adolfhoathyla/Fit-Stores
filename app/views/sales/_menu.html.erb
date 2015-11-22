@@ -1,0 +1,14 @@
+<div class="box-left field">
+    <ul class="nav nav-pills nav-stacked nav-justified">
+        <li><a href="#"><h1 class="no-margin" id="logo">Status Da Venda</h1></a></li>
+    </ul>
+</div>
+<div class="box-left be-red white field">
+    <ul class="no-list row center-xs middle-xs nav nav-pills">
+        <li class="col-md"><%= link_to "Aguardando Envio Pela Loja", sales_path(store_id: @store_id, status: "Aguardando Envio Pela Loja", month: Time.now.month, year: Time.now.year), data: { no_turbolink: true } %></li>
+        <li class="col-md"><%= link_to "Aguardando Loja Confirmar Entrega", sales_path(store_id: @store_id, status: "Aguardando Loja Confirmar Entrega", month: Time.now.month, year: Time.now.year), data: { no_turbolink: true } %></li>
+        <li class="col-md"><%= link_to "Venda Concluída", sales_path(store_id: @store_id, status: "Venda Concluída", month: Time.now.month, year: Time.now.year), data: { no_turbolink: true } %></li>
+        <li class="col-md"><%= link_to "Venda Cancelada Pela Loja", sales_path(store_id: @store_id, status: "Venda Cancelada Pela Loja", month: Time.now.month, year: Time.now.year), data: { no_turbolink: true } %></li>
+        <li class="col-md"><%= link_to "Venda Cancelada Pelo Cliente", sales_path(store_id: @store_id, status: "Venda Cancelada Pelo Cliente", month: Time.now.month, year: Time.now.year), data: { no_turbolink: true } %></li>
+    </ul>
+</div>

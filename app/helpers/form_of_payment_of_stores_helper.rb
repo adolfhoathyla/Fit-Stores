@@ -1,0 +1,2 @@
+module FormOfPaymentOfStoresHelper
+end

@@ -1,0 +1,48 @@
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-12">
+    <h1>Listando Todos Produtos do Site</h1>
+    <div class="panel panel-default table-responsive">
+      <table id="tabela" class="table table-striped table-bordered" cellspacing="0">
+        
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Benefícios</th>
+            <th>Contraindicações</th>
+            <th>Marca</th>
+            <th>Peso</th>
+            <th>Foto</th>
+            <% if admin_signed_in? %>
+            <th>Editar</th>
+            <th>Excluir</th>
+            <% end %>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if @products.count > 0 %> 
+            <% @products.each do |product| %>
+              <tr>
+                <td align="left"><%= link_to product.name, product, class: "red" %></td>
+                <td align="left"><%= product.type_of_suplement %></td>
+                <td align="left"><%= product.desc %></td>
+                <td align="left"><%= product.benefits %></td>
+                <td align="left"><%= product.contraindication %></td>
+                <td align="left"><%= product.brand %></td>
+                <td align="left"><%= product.weight %></td>
+                <td align="left"><%= image_tag product.photo.url(), size: "100" %></td>
+                <% if admin_signed_in? %>
+                <td align="left"><%= link_to "Editar", edit_product_path(product), class:"red" %></td>
+                <td align="left"><%= link_to "Excluir", product, class:"red", method: :delete %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,206 @@
+<script type="text/javascript">
+window.onDomReady(function() {
+  new dgCidadesEstados({
+    estado: document.getElementById('address_state'),
+    cidade: document.getElementById('address_city'),
+    estadoVal: document.getElementById('address_state').val,
+    cidadeVal: document.getElementById('address_city').val,
+    change: true
+  });
+});
+</script>
+
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <div class="box text-left">
+      <h1><%= current_store.name %></h1>
+<!-- :url => { :action => "custom_update" -->
+      <%= form_for(current_store, url: {controller: "/stores", action: "update_email"} ) do |f| %>
+
+        <h3>Editar Email</h3>
+
+        <% if devise_error_messages! != "" %>
+        <div class="alert alert-danger" role="alert">
+          <%= devise_error_messages! %>
+        </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, required: true, class:"form-control", placeholder: "Email" %>
+        </div>
+
+        <div class="field">
+          <%= f.submit "Editar", class:"btn be-red white" %>
+        </div>
+
+      <% end %>
+      <%= form_for(current_store, url: {controller: "/stores", action: "update_password"} ) do |f| %>
+
+        <h3>Editar Senha</h3>
+
+        <div class="field">
+          <%= f.password_field :current_password, autocomplete: "off", required: true, placeholder: "Senha Antiga", class:"form-control" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "off", required: true, class:"form-control", placeholder: "Nova Senha" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "off", required: true, class:"form-control", placeholder: "Confirmar Nova Senha"  %>
+        </div>
+
+        <div class="field">
+          <%= f.submit "Editar", class:"btn be-red white" %>
+        </div>
+
+      <% end %>
+      <%= form_for(current_store, url: {controller: "/stores", action: "update_infos_of_stores"} ) do |f| %>
+
+        <h3>Editar Informações Da Loja</h3>
+
+        <div class="field">
+          <%= f.text_field :name, autofocus: true, required: true, class:"form-control", placeholder: "Nome Da Loja"  %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :cnpj, autofocus: true, required: true, class:"form-control", placeholder: "CNPJ"  %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :instagram, autofocus: true, class:"form-control", placeholder: "Instagram"  %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :facebook, autofocus: true, class:"form-control", placeholder: "Facebook"  %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :site, autofocus: true, class:"form-control", placeholder: "Site"  %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :telephone, autofocus: true, required: true, class:"form-control", placeholder: "Telefone", type: "telephone" %>
+        </div>
+
+        <div class="field">
+          <%= f.text_field :name_responsible, autofocus: true, required: true, class:"form-control", placeholder: "Nome do responsável"  %>
+        </div>
+
+        <div class="field">
+          <% if current_store.photo.exists? %>
+            <%= f.label "Foto Cadastrada: " %>
+            <%= image_tag current_store.photo, size: "150" %>
+          <% end %>
+        </div>
+        <div class="field">
+          <%= f.label :photo, "Nova Foto da loja" %>
+          <%= f.file_field :photo, class:"form-control" %>
+        </div>
+
+        <div class="field">
+          <%= f.check_box :delivery, onclick: "showMe('div1')" %>
+          <%= f.label :delivery, "Possui delivery?" %>
+        </div>
+
+        <%
+          if current_store.value_per_km != nil 
+            price = sprintf("%.02f" , current_store.value_per_km)
+            price["."] = ","
+            price = "R$ " + price
+          end
+        %>
+        <% if current_store.delivery %>
+        <div class="field" id="div1" style="display:block">
+        <% else %>
+        <div class="field" id="div1" style="display:none">
+        <% end %>
+          <div class="alert alert-info" role="alert">Nossa Forma De Calcular o Valor Do Delivery É Pela Distância Entre O Endereço De Entrega E O Da Loja, Informe-nos O Valor Por Quilometro Abaixo!</div>
+          <% if current_store.value_per_km != nil %>
+            <%= f.text_field :value_per_km, autofocus: true, required: true, class:"form-control", type: "price", placeholder: "Valor Por KM(R$)", value: price %>
+          <% else %>
+            <%= f.text_field :value_per_km, autofocus: true, class:"form-control", type: "price", placeholder: "Valor Por KM(R$)" %>
+          <% end %>
+        </div>
+        <div class="field">
+          <%= f.submit "Editar", class:"btn be-red white" %>
+        </div>
+      <% end %>
+      <%= form_for(current_store, url: {controller: "/stores", action: "update_address_of_store"} ) do |f| %>  
+
+        <h3>Editar Endereço</h3>
+
+        <%= fields_for Address.find_by_store_id(current_store.id) do |a| %>
+
+          <div class="field">
+            <%= a.label :country, "País: Brasil" %>
+          </div>
+          <div class="field">
+            <%= a.label :state, "Estado: " %>
+            <p/>
+            <%= a.text_field :state, required: true, class:"form-control" %>
+          </div>
+          <div class="field">
+            <%= a.label :city, "Cidade: " %>
+            <p/>
+            <%= a.text_field :city, required: true, class:"form-control" %>
+          </div>
+           <div class="field">
+            <%= a.text_field :district, required: true, class:"form-control", placeholder: "Bairro"  %>
+          </div>
+          <div class="field">
+            <%= a.text_field :street, required: true, class:"form-control", placeholder: "Rua"  %>
+          </div>
+          <div class="field">
+            <%= a.text_field :number, required: true, class:"form-control", placeholder: "Número", pattern: "[0-9]+", title: "Permitido apenas números" %>
+          </div>
+          <div class="field">
+            <%= a.text_field :cep, required: true, class:"form-control", placeholder: "CEP" %>
+          </div>
+          <div class="field">
+            <%= a.text_field :complement, class:"form-control", placeholder: "Complemento" %>
+          </div>
+        <% end %>
+        <div class="field">
+          <%= f.submit "Editar", class:"btn be-red white" %>
+        </div>
+      <% end %>
+      <%= form_for(current_store, url: {controller: "/stores", action: "update_forms_of_payments_of_store"} ) do |f| %>  
+      
+        <h3>Editar Formas De Pagamento</h3>
+
+        <%= fields_for :form_of_payment_of_stores do |fps| %>
+
+          <% FormOfPayment.all.each do |fp| %>
+            <div class="field">
+              
+              <% 
+                contem_form_of_payment = false
+                current_store.form_of_payment_of_stores.each { |form_of_payment_of_stores| 
+                  if fp.id == form_of_payment_of_stores.form_of_payment_id
+                    contem_form_of_payment = true
+                  end
+                }
+              %>
+              <% if contem_form_of_payment %>
+                <%= fps.check_box(:ids_forms_of_payment, { :multiple => true, :checked => true }, fp.id) %>
+              <% else %>
+                <%= fps.check_box(:ids_forms_of_payment, { :multiple => true }, fp.id) %>
+              <% end %>
+              <%= fps.label :ids_forms_of_payment, fp.title %>
+
+            </div>
+          <% end %>
+          
+        <% end %>
+
+        <div class="field">
+          <%= f.submit "Editar", class:"btn be-red white" %>
+        </div>
+      <% end %>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</div>

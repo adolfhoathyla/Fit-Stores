@@ -1,0 +1,2 @@
+module OnSalePercentagesHelper
+end

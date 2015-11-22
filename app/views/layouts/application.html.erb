@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IWheyWebService</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	<nav class="be-red white large-padding">
+		<ul class="no-list row center-xs middle-xs nav nav-pills">
+			<li class="col-md">
+				<%= image_tag "iwhey.jpg", class:"img-responsive", size:"70" %>
+			</li>
+			<% if admin_signed_in? %>
+			<li class="col-md">
+				<%= link_to "Produtos do Site", products_path, data: { no_turbolink: true }  %>	
+			</li>	
+			<li class="col-md">
+				<%= link_to "Novo Produto", new_product_path, data: { no_turbolink: true }  %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Todas as Lojas", stores_index_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Sugestões de Produtos", product_suggestions_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+  				Admin: <%= current_admin.email %>, <%= link_to "Sair", destroy_admin_session_path, method: :delete %>
+			</li>
+			<% elsif store_signed_in? %>
+			<li class="col-md">
+				<%= link_to "Produtos do Site", products_path, data: { no_turbolink: true }  %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Adicionar Produtos", new_store_product_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Produtos da Loja", store_products_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Vendas Da Loja", sale_store_index_path(status: "Aguardando Envio Pela Loja", month: Time.now.month, year: Time.now.year), data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Minhas Sugestões", product_suggestions_index_suggestions_of_store_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Criar Sugestões", new_product_suggestion_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Editar Loja", edit_store_registration_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+  				Loja: <%= current_store.name %>, <%= link_to "Sair", destroy_store_session_path, method: :delete %>
+			</li>
+			<% else %>
+			<li class="col-md">
+				<%= link_to "Login Loja", new_store_session_path, data: { no_turbolink: true } %>	
+			</li>
+			<li class="col-md">
+				<%= link_to "Cadastrar Loja", new_store_registration_path, data: { no_turbolink: true } %>	
+			</li>
+			<% end %>
+		</ul>
+	</nav>
+</header>
+
+<div class="row center-xs center">
+  	<div class="col-xs-12 col-md-12">
+    	<div class="box text-left">
+			<% if notice != nil %>
+				<div class="alert alert-info" role="alert"><%= notice %></div>
+			<% end %>
+			<% if alert != nil %>
+				<div class="alert alert-danger" role="alert"><%= alert %></div>
+			<% end %>
+		</div>
+
+		<%= yield %>
+	</div>
+</div>
+
+</body>
+</html>

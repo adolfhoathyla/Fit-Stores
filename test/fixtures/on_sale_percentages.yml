@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  percentage: 1.5
+  date_limit: 2015-09-29 17:53:01
+
+two:
+  title: MyString
+  percentage: 1.5
+  date_limit: 2015-09-29 17:53:01

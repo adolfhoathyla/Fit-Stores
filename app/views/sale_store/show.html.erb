@@ -1,0 +1,176 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-10">
+    <h1><strong>Detalhes da venda</strong></h1>
+    <div class="box">
+      <div class="field">
+        <strong>Status:</strong>
+        <%= @sale.status %>
+      </div>
+      <% if @sale.status == "Venda Cancelada Pela Loja" %> 
+      <div class="field">
+        <strong>Motivo Do Cancelamento:</strong>
+        <%= @sale.motivation %>
+      </div>
+      <% end %>
+      <div class="field">
+        <strong>Quantidade De Produtos:</strong>
+        <% quantity = 0 %>
+        <% @sale.sale_products.each do |sale_product| %>
+          <% quantity += sale_product.quantity %>
+        <% end %>
+        <%= quantity %>
+      </div>
+      <div class="field">
+        <strong>Endereço De Entrega:</strong>
+        <%= @sale.address.full_address %>
+      </div>
+      <div class="field">
+        <strong>Valor Total Da Venda:</strong>
+        <% 
+            price = sprintf("%.02f" , @sale.total_value+@sale.delivery_value)
+            price["."] = ","
+        %>
+        R$<%= price %>
+      </div>
+      <div class="field">
+        <strong>Forma De Pagamento:</strong>
+        <% if @sale.form_of_payment != nil %>
+          <%= @sale.form_of_payment.title %>
+        <% else %>
+
+        <% end %>
+      </div>
+      <div class="field">
+        <strong>Valor Do Delivery:</strong>
+        <% 
+            priceDelivery = sprintf("%.02f" , @sale.delivery_value)
+            priceDelivery["."] = ","
+        %>
+        R$<%= priceDelivery %>
+      </div>
+      <div class="field">
+        <strong>Prazo De Entrega:</strong>
+        <%= @sale.delivery_limit %>
+      </div>
+    </div>
+    <div class="field panel panel-default table-responsive">
+      <table id="tabela" class="table table-striped table-bordered" cellspacing="0">
+        
+        <thead>
+          <tr>
+          	<th>Foto</th>
+            <th>Nome Do Produto</th>
+            <th>Marca</th>
+            <th>Peso</th>
+            <th>Quantidade Do Produto</th>
+            <th>Valor Unitário(R$)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @sale.sale_products.each do |sale_product| %>
+            <tr> 
+              <td align="left"><%= image_tag sale_product.product.photo.url(), size: "100" %></td>
+              <td align="left"><%= sale_product.product.name %></td>
+              <td align="left"><%= sale_product.product.brand %></td>
+              <td align="left"><%= sale_product.product.weight %></td>
+              <td align="left"><%= sale_product.quantity %></td>
+              <% 
+                  price_product = sprintf("%.02f" , sale_product.price)
+                  price_product["."] = ","
+              %>
+              <td align="left">R$<%= price_product %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <% if @sale.status == "Aguardando Envio Pela Loja" or @sale.status == "Aguardando Loja Confirmar Entrega" %>
+      <div class="field">
+        <%= form_for(@sale, url: sale_store_update_with_status_path) do |e| %>
+          <%= e.hidden_field :id %>
+          <% if @sale.status == "Aguardando Envio Pela Loja" %>
+            <%= e.hidden_field :status, value: "Aguardando Loja Confirmar Entrega" %>
+            <%= e.submit "Enviar Produtos", class:"btn be-red white" %>
+          <% else %>
+            <%= e.hidden_field :status, value: "Venda Concluída" %>
+            <%= e.submit "Confirmar Venda", class:"btn be-red white" %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @sale.status != "Venda Cancelada Pela Loja" and @sale.status != "Venda Cancelada Pelo Cliente" and @sale.status != "Venda Concluída" %>
+      <div class="field">
+        <%= form_for(@sale, url: sale_store_update_with_status_path) do |c| %>
+          <%= c.hidden_field :id %>
+          <%= c.hidden_field :status, value: "Venda Cancelada Pela Loja" %>
+          <div class="alert alert-info" role="alert">Para Cancelar Venda Necessita De Um Motivo!</div>
+          <div class="field">
+            <%= c.text_field :motivation, required: true, class:"form-control", placeholder: "Motivo Pelo Cancelamento" %>
+          </div>
+          <div class="field">
+            <%= c.submit "Cancelar Venda", class:"btn be-red white" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="field">
+      <h1>Rota Utilizada Para Cálculo do Delivery</h1>
+    </div>
+    <%= hidden_field_tag 'latOrigin', @sale.address.latitude %>
+    <%= hidden_field_tag 'lngOrigin', @sale.address.longitude %>
+    <%= hidden_field_tag 'latDestination', current_store.address.latitude %>
+    <%= hidden_field_tag 'lngDestination', current_store.address.longitude %>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+    </style>
+    <script>
+      function initMap() {
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var directionsService = new google.maps.DirectionsService;
+        var latOrigin = parseFloat(document.getElementById('latOrigin').value);
+        var lngOrigin = parseFloat(document.getElementById('lngOrigin').value);
+        var latDestination = parseFloat(document.getElementById('latDestination').value);
+        var lngDestination = parseFloat(document.getElementById('lngDestination').value);
+        var latMedia = (latOrigin+latDestination)/2;
+        var lngMedia = (lngOrigin+lngDestination)/2;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {lat: latMedia, lng: lngMedia}
+        });
+        directionsDisplay.setMap(map);
+
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        
+        var latOrigin = parseFloat(document.getElementById('latOrigin').value);
+        var lngOrigin = parseFloat(document.getElementById('lngOrigin').value);
+        var latDestination = parseFloat(document.getElementById('latDestination').value);
+        var lngDestination = parseFloat(document.getElementById('lngDestination').value);
+        directionsService.route({
+          origin: {lat: latOrigin, lng: lngOrigin},  // Haight.
+          destination: {lat: latDestination, lng: lngDestination},  // Ocean Beach.
+          // Note that Javascript allows us to access the constant
+          // using square brackets and a string value as its
+          // "property."
+          travelMode: google.maps.TravelMode.DRIVING
+        }, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFK_VGGcvxTeoCURoEjnEhTfvvjM9e9sY&signed_in=true&callback=initMap"
+        async defer></script>
+    <div class="field center-xs" id="map"></div>
+    <p/>
+  </div>
+</div>

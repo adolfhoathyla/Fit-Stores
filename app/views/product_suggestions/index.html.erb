@@ -1,0 +1,43 @@
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-12">
+    <h1>Listando Todas as Sugestões de Produtos do Site</h1>
+    <div class="panel panel-default table-responsive">
+      <table id="tabela" class="table table-striped table-bordered" cellspacing="0">
+        
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Foto</th>
+            <th>Status</th>
+            <% if admin_signed_in? %>
+            <th>Editar Status</th>
+            <th>Excluir</th>
+            <% end %>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if @products_suggestions.count > 0 %> 
+            <% @products_suggestions.each do |product_suggestion| %>
+              <tr>
+                <td align="left"><%= link_to product_suggestion.name, product_suggestion, class: "red" %></td>
+                <td align="left"><%= product_suggestion.brand %></td>
+                <td align="left"><%= image_tag product_suggestion.photo.url(), size: "100" %></td>
+                <td align="left"><%= product_suggestion.status %></td>
+                <% if admin_signed_in? %>
+                  <%= form_for(product_suggestion, url: product_suggestions_update_with_status_path) do |f| %>
+                    <%= f.hidden_field :id, value: product_suggestion.id %>
+                    <td align="left"><%= f.text_field :status, class:"form-control", required: true, placeholder: "Status" %><%= f.submit :Editar, class:"btn be-red white" %></td>
+                  <% end %>
+                  <td align="left"><%= link_to "Excluir", product_suggestion, class:"red", method: :delete %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

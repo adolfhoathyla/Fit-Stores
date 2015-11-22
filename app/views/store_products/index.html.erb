@@ -1,0 +1,87 @@
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-12">
+    <h1>Listando Produtos da Loja</h1>
+    <div class="panel panel-default table-responsive">
+      <table id="tabela" class="table table-striped table-bordered" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Loja</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Benefícios</th>
+            <th>Contraindicações</th>
+            <th>Marca</th>
+            <th>Peso</th>
+            <th>Foto</th>
+            <th>Preço(R$)</th>
+            <th>Oferta(R$)</th>
+            <th>Desconto(%)</th>
+            <% if store_signed_in? %> 
+              <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+              <th>Adicionar Promoção</th>
+              <th>Excluir Promoção</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+              <% end %>
+            <% end %>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if @store_products.count > 0 %>
+            <% @store_products.each do |store_product| %>
+              <tr>
+                <td align="left"><%= store_product.store.name %></td>
+                <td align="left"><%= store_product.product.name %></td>
+                <td align="left"><%= store_product.product.type_of_suplement %></td>
+                <td align="left"><%= store_product.product.benefits %></td>
+                <td align="left"><%= store_product.product.contraindication %></td>
+                <td align="left"><%= store_product.product.brand %></td>
+                <td align="left"><%= store_product.product.weight %></td>
+                <td align="left"><%= image_tag store_product.product.photo.url(), size: "100" %></td>
+                <% 
+                    price = sprintf("%.02f" , store_product.price)
+                    price["."] = ","
+                    if store_product.on_sale_percentage != nil
+                      percentage = store_product.on_sale_percentage.percentage
+                      priceDiscount = ((100-percentage)/100)*store_product.price
+                      priceDiscount = sprintf("%.02f" , priceDiscount)
+                      priceDiscount["."] = ","
+                      percentage = sprintf("%.02f" , percentage)
+                      percentage["."] = ","
+                    end
+                %>
+                <td align="left">R$<%= price %></td>
+                <% if store_product.on_sale_percentage != nil %>
+                  <td align="left">R$<%= priceDiscount %></td>
+                  <td align="left"><%= percentage %>%</td>
+                  <% if store_signed_in? %> 
+                    <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+                  <td align="left"><%= link_to "Editar Promoção", edit_on_sale_percentage_path(store_product), class: "red", data: { no_turbolink: true } %></td>
+                  <td align="left"><%= link_to "Excluir Promoção", store_product.on_sale_percentage, class: "red", method: :delete %></td>
+                    <% end %>
+                  <% end %>
+                <% else %>
+                  <td align="left">R$<%= price %></td>
+                  <td align="left">0,00%</td>
+                  <% if store_signed_in? %> 
+                    <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+                  <td align="left"><%= link_to "Criar Promoção", new_on_sale_percentage_path(store_product_id: store_product.id), class: "red", data: { no_turbolink: true } %></td>
+                  <td align="left"></td>
+                    <% end %>
+                  <% end %>
+                <% end %>
+                <% if store_signed_in? %> 
+                  <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+                  <td align="left"><%= link_to "Editar", edit_store_product_path(store_product), data: { no_turbolink: true }, class: "red" %></td>
+                  <td align="left"><%= link_to "Excluir", store_product, class: "red", method: :delete %></td>
+                  <% end %>
+                <% end %>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

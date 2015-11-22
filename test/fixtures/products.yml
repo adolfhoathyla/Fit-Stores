@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  desc: MyString
+  benefits: MyString
+  contraindication: MyString
+  name: MyString
+  brand: MyString
+  weight: MyString
+
+two:
+  type: 
+  desc: MyString
+  benefits: MyString
+  contraindication: MyString
+  name: MyString
+  brand: MyString
+  weight: MyString

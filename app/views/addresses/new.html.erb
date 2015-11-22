@@ -1,0 +1,35 @@
+<h1>Endereço</h1>
+
+<% @address = Address.new %>
+<%= form_for(@address) do |f| %>
+
+  <div class="field">
+    <%= f.label :country, "País" %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :state, "Estado" %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :city, "Cidade" %><br>
+    <%= f.text_field :city %>
+  </div>
+   <div class="field">
+    <%= f.label :district, "Bairro" %><br>
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :street, "Rua" %><br>
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :number, "Número" %><br>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :cep, "CEP" %><br>
+    <%= f.text_field :cep %>
+  </div>
+<% end %>
+

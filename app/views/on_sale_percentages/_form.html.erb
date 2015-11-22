@@ -1,0 +1,45 @@
+<p/>
+
+<div class="row center-xs">
+  	<div class="col-xs-8 col-md-6">
+    	<div class="box text-left">
+			<h3>Promoção Para o Suplemento</h3>
+			<%= form_for(@on_sale_percentage) do |f| %>
+				<% @on_sale_percentage.errors.full_messages.each do |message| %>
+					<div class="alert alert-danger" role="alert">
+						<%= message %>
+					</div>
+				<% end %>
+				<%= f.hidden_field :store_product_id, value: id %>
+				<div class="field">
+					<%= f.text_field :title, class:"form-control", required: true, placeholder: "Título da Promoção" %>
+				</div>
+				<% if @on_sale_percentage.percentage != nil %>
+					<% 
+						percentage_string = sprintf("%.02f" , @on_sale_percentage.percentage)
+	            		percentage_string["."] = ","
+	            		percentage_string += " %"
+
+					%>
+					<div class="field">
+						<%= f.text_field :percentage, class:"form-control", required: true, placeholder: "Desconto(%)", value: percentage_string %>
+					</div>
+				<% else %>
+					<div class="field">
+						<%= f.text_field :percentage, class:"form-control", required: true, placeholder: "Desconto(%)" %>
+					</div>
+				<% end %>
+				
+				<div class="field">
+					<%= f.text_field :date_limit, class:"form-control", required: true, type: "date", min:Date.today.to_s %>
+				</div>
+				<div class="field">
+					<%= time_field_tag('hour_limit', nil, class: 'form-control', required: true) %>
+				</div>
+				<div class="field">
+					<%= f.submit :"Adicionar Promoção", class:"btn be-red white" %>
+				</div>
+			<% end %>
+		</div>
+  	</div>
+</div>

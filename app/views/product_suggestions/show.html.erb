@@ -1,0 +1,21 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <h1><strong>Detalhes da sugestão de produto: <%= @product_suggestion.name %></strong></h1>
+    <div class="box">
+      <div class="field">
+        <strong>Marca:</strong>
+        <%= @product_suggestion.brand %>
+      </div>
+
+      <div class="field">
+        <strong>Status:</strong>
+        <%= @product_suggestion.status %>
+      </div>
+
+      <div class="field text">
+        <%= image_tag @product_suggestion.photo.url(), size: "200" %>
+      </div>
+    </div>
+  </div>
+</div>
+

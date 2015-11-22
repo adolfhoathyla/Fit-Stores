@@ -1,0 +1,47 @@
+
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <div class="box">
+
+      <div class="field text">
+        <%= image_tag @store_product.product.photo.url(), size: "150" %>
+      </div>
+
+      <div class="field">
+        <strong>Nome do Suplemento:</strong>
+        <%= @store_product.product.name %>
+      </div>
+
+      <div class="field">
+        <strong>Tipe:</strong>
+        <%= @store_product.product.type_of_suplement %>
+      </div>
+
+      <div class="field">
+        <strong>Descrição:</strong>
+        <%= @store_product.product.desc %>
+      </div>
+
+      <div class="field">
+        <strong>Benefícios:</strong>
+        <%= @store_product.product.benefits %>
+      </div>
+
+      <div class="field">
+        <strong>Contraindicações:</strong>
+        <%= @store_product.product.contraindication %>
+      </div>
+
+      <div class="field">
+        <strong>Marca:</strong>
+        <%= @store_product.product.brand %>
+      </div>
+
+      <div class="field">
+        <strong>Peso:</strong>
+        <%= @store_product.product.weight %>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,88 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <h1><strong>Informações Da Loja</strong></h1>
+    <div class="box">
+
+      <div class="field">
+        <%= link_to "Vendas Da Loja", sales_path(store_id: @store_id, status: "Aguardando Envio Pela Loja", month: Time.now.month, year: Time.now.year), class:"btn be-red white", data: { no_turbolink: true }  %>
+      </div>
+
+      <div class="field">
+        <%= link_to "Produtos Da Loja", store_products_path(:store_id => @store.id), class:"btn be-red white" %>
+      </div>
+
+      <div class="field">
+        <strong>Nome Da Loja:</strong>
+        <%= @store.name %>
+      </div>
+
+      <div class="field">
+        <strong>Email:</strong>
+        <%= @store.email %>
+      </div>
+
+      <div class="field">
+        <strong>Nome Do Responsável:</strong>
+        <%= @store.name_responsible %>
+      </div>
+
+      <div class="field">
+        <strong>CNPJ:</strong>
+        <%= @store.cnpj %>
+      </div>
+
+      <div class="field">
+        <strong>Instagram:</strong>
+        <%= @store.instagram %>
+      </div>
+
+      <div class="field">
+        <strong>Facebook:</strong>
+        <%= @store.facebook %>
+      </div>
+
+      <div class="field">
+        <strong>Site:</strong>
+        <%= @store.site %>
+      </div>
+
+      <div class="field">
+        <strong>Telefone:</strong>
+        <%= @store.telephone %>
+      </div>
+
+      <div class="field">
+        <strong>Foto:</strong>
+        <%= image_tag @store.photo, size: "150" %>
+      </div>
+
+        <%
+          price = ""
+          if @store.value_per_km != nil 
+            price = sprintf("%.02f" , @store.value_per_km)
+            price["."] = ","
+            price = "R$ " + price
+          end
+        %>
+
+      <div class="field">
+        <strong>Valor Por Km:</strong>
+        <%= price %>
+      </div>
+
+      <div class="field">
+        <strong>Endereço:</strong>
+        <%= @store.address.full_address %>
+      </div>
+      
+      <div class="field">
+        <strong>Formas De Pagamento:</strong>
+        <% @store.form_of_payment_of_stores.each do |form_of_payment_of_store| %>
+          <p/><%= form_of_payment_of_store.form_of_payment.title %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
