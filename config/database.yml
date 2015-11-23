@@ -11,8 +11,8 @@ default: &default
   reconnect: false
   pool: 5
   timeout: 5000
-  username: <%= ENV["IWHEYWEB_DATABASE_USER"] %>
-  password: <%= ENV["IWHEYWEB_DATABASE_PASSWORD"] %>
+  username: root
+  password: iwhey
   host: localhost
 
 development:
