@@ -142,10 +142,8 @@ class Stores::RegistrationsController < Devise::RegistrationsController
 
   def update_forms_of_payments_of_store
     @store = current_store
-    @store.form_of_payment_of_stores.each do |form_of_payment_of_store|
-      form_of_payment_of_store.destroy
-      ids_forms_of_payment = params[:form_of_payment_of_stores][:ids_forms_of_payment]
-    end
+    @store.form_of_payment_of_stores.destroy_all
+    ids_forms_of_payment = params[:form_of_payment_of_stores][:ids_forms_of_payment]
     ids_forms_of_payment.each { |id|
       if id != "" and id != "0"
         form_of_payment_of_store = FormOfPaymentOfStore.new

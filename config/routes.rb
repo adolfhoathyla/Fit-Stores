@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'store_products/find_store_product_withs_ids'
 
   patch 'sale_store/update_with_status'
+  patch 'sale_store/cancel_sale_store'
 
   post 'stores/update_column_active'
   patch 'stores/update_column_active'

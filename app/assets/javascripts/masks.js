@@ -4,6 +4,7 @@ $(function(){
    	$("[type=po]").maskMoney({suffix:' gramas', precision:0, thousands:'', decimal:'', symbolStay: true, allowZero: false});
     $("[type=liquido]").maskMoney({suffix:' ml', precision:0, thousands:'', decimal:'', symbolStay: true, allowZero: false});
     $("[type=comprimido]").maskMoney({suffix:' comprimidos', precision:0, thousands:'', decimal:'', symbolStay: true, allowZero: false});
+    $("[type=capsula]").maskMoney({suffix:' cápsulas', precision:0, thousands:'', decimal:'', symbolStay: true, allowZero: false});
    	$("#on_sale_percentage_percentage").maskMoney({suffix:' %', thousands:'', decimal:',', symbolStay: true});
    	$("[type=price]").maskMoney({prefix:'R$ ', thousands:'', decimal:',', symbolStay: true, allowZero: false});
    	$('[type=telephone]')    

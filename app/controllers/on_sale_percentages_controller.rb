@@ -4,10 +4,7 @@ class OnSalePercentagesController < ApplicationController
 	#before_action :verify_client_json, only: [:index]
 
 	def index
-		@on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now)
-    	@on_sale_percentages.each do |on_sale_percentage|
-      		on_sale_percentage.destroy
-    	end
+    	@on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now).destroy_all
 		@on_sale_percentages = OnSalePercentage.where("date_limit > ?", Time.now)
 		render json: @on_sale_percentages.map { |osp| [ on_sale_percentage: osp, store_products: osp.store_products.map { |sp| [store_product: sp, product: sp.product, product_photo: sp.product.photo, store: sp.store, store_photo: sp.store.photo, address: Address.find_by_store_id(sp.store.id), on_sale_percentage: sp.on_sale_percentage, forms_of_payment_of_store: sp.store.form_of_payment_of_stores.map { |fps| {form_of_payment: FormOfPayment.find(fps.form_of_payment_id)} } ] } ] }
 	end
@@ -23,6 +20,11 @@ class OnSalePercentagesController < ApplicationController
 	    	return
 	    elsif @store_product.store != current_store
 	    	redirect_to store_products_path, alert: "Esse produto nao é seu"
+	    	return
+	    end
+	    numeroDePromocoesDaLoja = StoreProduct.joins(:store).where(stores:{id:current_store.id}).where("on_sale_percentage_id is not null").count
+	    if numeroDePromocoesDaLoja >= 5
+	    	redirect_to store_products_path, alert: "Você excedeu o limite de promoções, por favor, exclua alguma para adicionar outra."
 	    	return
 	    end
 		@on_sale_percentage = OnSalePercentage.new
