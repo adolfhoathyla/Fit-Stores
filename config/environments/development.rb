@@ -19,8 +19,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => ENV["IWHEYWEB_EMAIL"],
-    :password             => ENV["IWHEYWEB_EMAIL_PASSWORD"],
+    :user_name            => 'iwheyapp@gmail.com',
+    :password             => 'iwheycgd',
     :authentication       => 'plain',
     :enable_starttls_auto => true 
   }
