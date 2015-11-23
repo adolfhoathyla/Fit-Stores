@@ -7126,3 +7126,1412 @@ Completed 200 OK in 295ms (Views: 171.9ms | ActiveRecord: 0.0ms)
 =======
 >>>>>>> 9be80742e5baa5e7df82885fb205a6a0dfd4e22b
 >>>>>>> 9a2a8126921b9753fd3f9d17eebad4e3b6b77c9d
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 11:41:21 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mStore Load (0.7ms)[0m  SELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1[0m
+Redirected to http://162.243.25.202:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 33ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 11:41:21 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.4ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 796ms (Views: 760.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 11:41:22 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 11:41:22 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 12:00:04 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mStore Load (0.8ms)[0m  SELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1[0m
+Redirected to http://162.243.25.202:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:00:04 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (1.9ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 490ms (Views: 457.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 12:00:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 12:00:07 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:00:33 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.5ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 208ms (Views: 206.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/sign_up" for 200.129.18.66 at 2015-11-23 12:00:35 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::RegistrationsController#new as HTML
+  [1m[35mFormOfPayment Load (0.7ms)[0m  SELECT `form_of_payments`.* FROM `form_of_payments`
+  Rendered stores/shared/_links.html.erb (0.6ms)
+  Rendered stores/registrations/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 223ms (Views: 219.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:00:40 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.6ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 210ms (Views: 207.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:01:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pG7mqBdKeH6BvAMBw4kLPX0Gtn2UAFvhY6I0BTXjrSlrUeGDwMdbvXGyc3osglvblRT/lc6QtEMxB/LLCkufJA==", "store"=>{"email"=>"aron@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT  `stores`.* FROM `stores` WHERE `stores`.`email` = 'aron@gmail.com'  ORDER BY `stores`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+Processing by Stores::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pG7mqBdKeH6BvAMBw4kLPX0Gtn2UAFvhY6I0BTXjrSlrUeGDwMdbvXGyc3osglvblRT/lc6QtEMxB/LLCkufJA==", "store"=>{"email"=>"aron@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendered stores/shared/_links.html.erb (0.5ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 308ms (Views: 182.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:01:12 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.4ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 175ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/sign_up" for 200.129.18.66 at 2015-11-23 12:01:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::RegistrationsController#new as HTML
+  [1m[35mFormOfPayment Load (0.5ms)[0m  SELECT `form_of_payments`.* FROM `form_of_payments`
+  Rendered stores/shared/_links.html.erb (0.3ms)
+  Rendered stores/registrations/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 189ms (Views: 187.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 12:04:41 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1
+Redirected to http://162.243.25.202:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:04:41 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.5ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 205ms (Views: 203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 12:12:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mStore Load (2.8ms)[0m  [1mSELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35mClient Load (0.4ms)[0m  SELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1
+Redirected to http://162.243.25.202:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:12:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.9ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 240ms (Views: 236.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:12:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 12:32:19 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mStore Load (0.8ms)[0m  SELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1[0m
+Redirected to http://162.243.25.202:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:32:19 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.3ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 591ms (Views: 553.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/on_sale_percentages.json" for 200.129.18.66 at 2015-11-23 12:37:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by OnSalePercentagesController#index as JSON
+  [1m[35mOnSalePercentage Load (5.1ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 17:37:05.636256')
+  [1m[36mOnSalePercentage Load (0.5ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit > '2015-11-23 17:37:05.646710')[0m
+Completed 200 OK in 27ms (Views: 0.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/on_sale_percentages.json" for 200.129.18.66 at 2015-11-23 12:37:33 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OnSalePercentagesController#index as JSON
+  [1m[35mOnSalePercentage Load (0.8ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 17:37:33.763757')
+  [1m[36mOnSalePercentage Load (0.2ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit > '2015-11-23 17:37:33.765789')[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:37:54 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.3ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 553ms (Views: 509.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 12:37:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:38:03 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.9ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 216ms (Views: 212.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/find_stores.json?search=Jsk" for 200.129.18.66 at 2015-11-23 12:38:05 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_stores as JSON
+  Parameters: {"search"=>"Jsk"}
+  [1m[35mStore Load (1.8ms)[0m  SELECT `stores`.* FROM `stores` WHERE (name LIKE '%Jsk%' AND active = 1)
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.4ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 192ms (Views: 191.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:23 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 12:41:25 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 12:41:25 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 12:56:44 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mStore Load (0.7ms)[0m  [1mSELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1
+Redirected to http://iwheyapp.com.br:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.4ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 199ms (Views: 197.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 12:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 12:56:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 12:56:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:02:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 33ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:02:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.3ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:02:14.676333')
+  [1m[36mStoreProduct Load (0.7ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:02:43 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:02:43 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.3ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:02:43.187419')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/on_sale_percentages.json" for 200.129.18.66 at 2015-11-23 13:02:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OnSalePercentagesController#index as JSON
+  [1m[36mOnSalePercentage Load (0.9ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:02:51.058777')[0m
+  [1m[35mOnSalePercentage Load (0.2ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit > '2015-11-23 18:02:51.062067')
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:04:54 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.8ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:04:54 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:04:54.429384')
+  [1m[36mStoreProduct Load (0.4ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `form_of_payments` (`title`, `created_at`, `updated_at`) VALUES ('Dinheiro', '2015-11-23 18:08:06', '2015-11-23 18:08:06')
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `form_of_payments` (`title`, `created_at`, `updated_at`) VALUES ('Débito Visa', '2015-11-23 18:08:25', '2015-11-23 18:08:25')[0m
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `form_of_payments` (`title`, `created_at`, `updated_at`) VALUES ('Débito Mastercard', '2015-11-23 18:08:36', '2015-11-23 18:08:36')
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `form_of_payments` (`title`, `created_at`, `updated_at`) VALUES ('Débito Elo', '2015-11-23 18:08:44', '2015-11-23 18:08:44')[0m
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `form_of_payments` (`title`, `created_at`, `updated_at`) VALUES ('Crédito Visa', '2015-11-23 18:08:56', '2015-11-23 18:08:56')
+  [1m[36m (3.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `form_of_payments` (`title`, `created_at`, `updated_at`) VALUES ('Crédito Mastercard', '2015-11-23 18:09:05', '2015-11-23 18:09:05')[0m
+  [1m[35m (5.0ms)[0m  COMMIT
+  [1m[36mFormOfPayment Load (2.4ms)[0m  [1mSELECT `form_of_payments`.* FROM `form_of_payments`[0m
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 13:12:34 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.1ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 629ms (Views: 574.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:41 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (1.0ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:12:41.542180')
+  [1m[36mStoreProduct Load (0.5ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:41 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.6ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:12:46.883926')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (2.1ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:12:51.298655')
+  [1m[36mStoreProduct Load (0.6ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:12:55.109560')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:12:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/on_sale_percentages.json" for 200.129.18.66 at 2015-11-23 13:13:12 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OnSalePercentagesController#index as JSON
+  [1m[35mOnSalePercentage Load (0.7ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:13:12.280834')
+  [1m[36mOnSalePercentage Load (0.3ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit > '2015-11-23 18:13:12.282881')[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:13:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.8ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:13:26.619160')
+  [1m[36mStoreProduct Load (0.5ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:13:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/on_sale_percentages.json" for 200.129.18.66 at 2015-11-23 13:13:34 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OnSalePercentagesController#index as JSON
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:13:34.306759')[0m
+  [1m[35mOnSalePercentage Load (0.2ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit > '2015-11-23 18:13:34.308080')
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/sign_up" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::RegistrationsController#new as HTML
+  [1m[36mFormOfPayment Load (0.5ms)[0m  [1mSELECT `form_of_payments`.* FROM `form_of_payments`[0m
+  Rendered stores/shared/_links.html.erb (0.4ms)
+  Rendered stores/registrations/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 222ms (Views: 218.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 13:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/stores/sign_up" for 200.129.18.66 at 2015-11-23 13:18:12 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::RegistrationsController#new as HTML
+  [1m[35mFormOfPayment Load (0.4ms)[0m  SELECT `form_of_payments`.* FROM `form_of_payments`
+  Rendered stores/shared/_links.html.erb (0.2ms)
+  Rendered stores/registrations/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 188ms (Views: 185.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:13 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 13:18:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 13:18:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 13:29:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.3ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 662ms (Views: 604.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:30:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.8ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 33ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 13:30:00 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.6ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 18:30:00.844801')[0m
+  [1m[35mStoreProduct Load (0.7ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+  [1m[36m (5.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAdmin Exists (1.1ms)[0m  SELECT  1 AS one FROM `admins` WHERE `admins`.`email` = BINARY 'adolfo.athyla@gmail.com' LIMIT 1
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO `admins` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('adolfo.athyla@gmail.com', '$2a$10$V9XtHSPvpWAitWNoJP8uHeX2kpnKvhL3YRpgmYJwqrnCMRuDNasY.', '2015-11-23 18:31:16', '2015-11-23 18:31:16')[0m
+  [1m[35m (5.0ms)[0m  COMMIT
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 13:33:21 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.7ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 13:38:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: NO)):
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `connect'
+  mysql2 (0.3.20) lib/mysql2/client.rb:70:in `initialize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
