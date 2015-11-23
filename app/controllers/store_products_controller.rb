@@ -4,10 +4,7 @@ class StoreProductsController < ApplicationController
   before_action :verify_store, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now)
-    @on_sale_percentages.each do |on_sale_percentage|
-      on_sale_percentage.destroy
-    end
+    @on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now).destroy_all
     if current_store != nil
   	  @store_products = current_store.store_products
     elsif params[:store_id] != nil
@@ -114,10 +111,7 @@ class StoreProductsController < ApplicationController
   end
 
   def find_store_product_withs_ids
-    @on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now)
-    @on_sale_percentages.each do |on_sale_percentage|
-      on_sale_percentage.destroy
-    end
+    @on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now).destroy_all
     @store_product = StoreProduct.where("product_id = ? AND store_id = ?", params[:product_id], params[:store_id]).first
 
     respond_to do |format|
@@ -126,10 +120,7 @@ class StoreProductsController < ApplicationController
   end
 
   def find_more_valuable_products
-    @on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now)
-    @on_sale_percentages.each do |on_sale_percentage|
-      on_sale_percentage.destroy
-    end
+    @on_sale_percentages = OnSalePercentage.where("date_limit < ?", Time.now).destroy_all
     country = params[:country]
     state = params[:state]
     city = params[:city]

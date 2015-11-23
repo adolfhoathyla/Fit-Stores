@@ -90,10 +90,8 @@
         <%= form_for(@sale, url: sale_store_update_with_status_path) do |e| %>
           <%= e.hidden_field :id %>
           <% if @sale.status == "Aguardando Envio Pela Loja" %>
-            <%= e.hidden_field :status, value: "Aguardando Loja Confirmar Entrega" %>
             <%= e.submit "Enviar Produtos", class:"btn be-red white" %>
           <% else %>
-            <%= e.hidden_field :status, value: "Venda Concluída" %>
             <%= e.submit "Confirmar Venda", class:"btn be-red white" %>
           <% end %>
         <% end %>
@@ -101,9 +99,8 @@
     <% end %>
     <% if @sale.status != "Venda Cancelada Pela Loja" and @sale.status != "Venda Cancelada Pelo Cliente" and @sale.status != "Venda Concluída" %>
       <div class="field">
-        <%= form_for(@sale, url: sale_store_update_with_status_path) do |c| %>
+        <%= form_for(@sale, url: sale_store_cancel_sale_store_path) do |c| %>
           <%= c.hidden_field :id %>
-          <%= c.hidden_field :status, value: "Venda Cancelada Pela Loja" %>
           <div class="alert alert-info" role="alert">Para Cancelar Venda Necessita De Um Motivo!</div>
           <div class="field">
             <%= c.text_field :motivation, required: true, class:"form-control", placeholder: "Motivo Pelo Cancelamento" %>

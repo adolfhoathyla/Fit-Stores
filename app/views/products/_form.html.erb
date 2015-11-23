@@ -32,7 +32,7 @@
 				<%= f.label :type_of_state, "Tipo do estado: " %>
 				<p/>
 				<%
-				type_of_state = ["Pó", "Líquido", "Comprimido"]
+				type_of_state = ["Pó", "Líquido", "Comprimido", "Cápsula"]
 				%>
         		<%= f.select :type_of_state, options_for_select(type_of_state, @product.type_of_state), {}, {class: "form-control", :onchange => "onClickTypeOfState()"} %>
 			</div>

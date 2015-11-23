@@ -33,16 +33,45 @@ class SaleStoreController < ApplicationController
 
 	def update_with_status
 		@sale_store = Sale.find(params[:sale][:id])
-		status = params[:sale][:status]
+		status = ""
 		@store = Store.find(@sale_store.store_id)
 		if current_store != @store
-			redirect_to sale_store_index_path(status:"Aguardando Envio Pela Loja", month:Time.now.month, year:Time.now.year), alert: "Essa venda não é sua"
+			redirect_to sale_store_index_path(status:@sale_store.status, month:Time.now.month, year:Time.now.year), alert: "Essa venda não é sua"
 			return
 		end
-		count_canceled_purchases = @store.count_canceled_purchases
 		count_confirmed_purchases = @store.count_confirmed_purchases
+		if @sale_store.status == "Aguardando Envio Pela Loja"
+			status = "Aguardando Loja Confirmar Entrega"
+		elsif @sale_store.status == "Aguardando Loja Confirmar Entrega"
+			status = "Venda Concluída"
+		else
+			redirect_to sale_store_index_path(status:"Aguardando Envio Pela Loja", month:Time.now.month, year:Time.now.year), alert: "Esse status não existe"
+			return
+		end
+		count_confirmed_purchases+=1
+		if @sale_store.update(status: status)
+			@store.update_columns(count_confirmed_purchases: count_confirmed_purchases)
+			respond_to do |format| 
+  				format.html {redirect_to sale_store_index_path(status: @sale_store.status, month: Time.now.month, year: Time.now.year), notice: "Status atualizado para: #{@sale_store.status}"}
+  				format.json {render json: {sale_store: @sale_store.attributes}}
+			end
+		else
+			respond_to do |format| 
+  				format.html {redirect_to sale_store_path(id: @sale_store.id), alert: "Erro ao atualizar status para: #{@sale_store.status}"}
+  				format.json {render json: { errors: "Erro ao atualizar status para: #{@sale_store.status}"}}
+			end
+		end
+	end
 
-		if status == "Venda Cancelada Pela Loja" and params[:sale][:motivation] == nil
+	def cancel_sale_store
+		@sale_store = Sale.find(params[:sale][:id])
+		@store = Store.find(@sale_store.store_id)
+		if current_store != @store
+			redirect_to sale_store_index_path(status:@sale_store.status, month:Time.now.month, year:Time.now.year), alert: "Essa venda não é sua"
+			return
+		end
+
+		if params[:sale][:motivation] == nil
 			respond_to do |format| 
   				format.html {redirect_to sale_store_path(id: @sale_store.id), alert: "Para Cancelar Venda Necessita De Um Motivo!"}
   				format.json {render json: { errors: "Para Cancelar Venda Necessita De Um Motivo!"}}
@@ -50,13 +79,12 @@ class SaleStoreController < ApplicationController
 			return
 		end
 
-		if @sale_store.status == "Aguardando Loja Confirmar Entrega" and status == "Venda Cancelada Pela Loja"
+		count_canceled_purchases = @store.count_canceled_purchases
+		if @sale_store.status == "Aguardando Loja Confirmar Entrega"
 			count_canceled_purchases+=1
-		elsif @sale_store.status == "Aguardando Loja Confirmar Entrega" and status == "Venda Concluída"
-			count_confirmed_purchases+=1
 		end
-		if @sale_store.update(status: status, motivation: params[:sale][:motivation])
-			@store.update_columns(count_canceled_purchases: count_canceled_purchases, count_confirmed_purchases: count_confirmed_purchases)
+		if @sale_store.update(status: "Venda Cancelada Pela Loja")
+			@store.update_columns(count_canceled_purchases: count_canceled_purchases)
 			respond_to do |format| 
   				format.html {redirect_to sale_store_index_path(status: @sale_store.status, month: Time.now.month, year: Time.now.year), notice: "Status atualizado para: #{@sale_store.status}"}
   				format.json {render json: {sale_store: @sale_store.attributes}}

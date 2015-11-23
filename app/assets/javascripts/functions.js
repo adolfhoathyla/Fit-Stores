@@ -30,6 +30,9 @@ function onClickTypeOfState () {
     } else if (valueTypeOfState == "Comprimido") {
         textFieldWeight.type = "comprimido"
         $("[type=comprimido]").maskMoney({suffix:' comprimidos', precision:0, thousands:'', decimal:'', symbolStay: true, allowZero: false});
+    } else if (valueTypeOfState == "Cápsula") {
+        textFieldWeight.type = "capsula"
+        $("[type=capsula]").maskMoney({suffix:' cápsulas', precision:0, thousands:'', decimal:'', symbolStay: true, allowZero: false});
     }
     textFieldWeight.focus();
 

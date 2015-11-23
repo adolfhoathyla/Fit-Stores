@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 	has_many :sale_products
-	has_many :store_products
+	has_many :store_products, dependent: :destroy
 
 	validates :type_of_suplement, presence: {message: "O Tipo do Produto É Obrigatório"}
 	validates :desc, presence: {message: "A Descrição do Produto É Obrigatório"}
