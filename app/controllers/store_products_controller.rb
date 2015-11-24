@@ -103,7 +103,17 @@ class StoreProductsController < ApplicationController
   end
 
   def find_store_products
-    @store_products = StoreProduct.where("product_id = ?", params[:product_id])
+    @all_store_products = StoreProduct.where("product_id = ?", params[:product_id])
+
+    @store_products = []
+
+    @all_store_products.each do |store_product|
+      store = Store.where("id = ? AND active = ?", store_product.store_id, true).first
+      if store != nil
+        sp = StoreProduct.where("product_id = ? AND store_id = ?", params[:product_id], store.id).first
+        @store_products << sp
+      end
+    end
 
     respond_to do |format|
       format.json {render json: @store_products}
