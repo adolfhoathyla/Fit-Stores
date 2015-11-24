@@ -9420,3 +9420,1448 @@ Processing by Stores::SessionsController#new as HTML
   Rendered stores/sessions/new.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 217ms (Views: 215.0ms | ActiveRecord: 0.0ms)
 >>>>>>> 7759416f3900d56db6973ad562d3608499bd91b2
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 14:10:58 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.3ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 620ms (Views: 564.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:12:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.8ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:12:50.256667')
+  [1m[36mStoreProduct Load (0.5ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:12:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:15:53 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (1.1ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:15:53.469476')[0m
+  [1m[35mStoreProduct Load (0.5ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:15:53 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:19:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (1.0ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:19:06.307534')
+  [1m[36mStoreProduct Load (0.5ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:19:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.8ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 202ms (Views: 199.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:23:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/admins/sign_in" for 200.129.18.66 at 2015-11-23 14:23:56 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered admins/shared/_links.html.erb (1.6ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 209ms (Views: 191.9ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/admins/sign_in" for 200.129.18.66 at 2015-11-23 14:24:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QApmNbEE/R0zJSnYnxPCTbK6EWMWJvDTygpUE5xQio0TM6Z6+nt+s5O0iXmYlL6QsFjtJZRkuqJt09HMGmxUvA==", "admin"=>{"email"=>"adolfo.athyla@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`email` = 'adolfo.athyla@gmail.com'  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE `admins` SET `last_sign_in_at` = '2015-11-23 19:24:06', `current_sign_in_at` = '2015-11-23 19:24:06', `last_sign_in_ip` = '200.129.18.66', `current_sign_in_ip` = '200.129.18.66', `sign_in_count` = 1, `updated_at` = '2015-11-23 19:24:06' WHERE `admins`.`id` = 1[0m
+  [1m[35m (4.9ms)[0m  COMMIT
+Redirected to http://iwheyapp.com.br:3000/
+Completed 302 Found in 174ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-23 14:24:06 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.7ms)[0m  SELECT COUNT(*) FROM `products`
+  Rendered products/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 248ms (Views: 231.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 200.129.18.66 at 2015-11-23 14:24:07 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 200.129.18.66 at 2015-11-23 14:24:07 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.4ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.1ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 200.129.18.66 at 2015-11-23 14:24:07 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.8ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.4ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.svg" for 200.129.18.66 at 2015-11-23 14:24:07 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.svg"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.7ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.1ms)
+
+
+Started GET "/products/new" for 200.129.18.66 at 2015-11-23 14:24:12 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/_form.html.erb (10.0ms)
+  Rendered products/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 265ms (Views: 243.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/products" for 200.129.18.66 at 2015-11-23 14:26:07 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iAs41ppMYVH/YrIoS7Cbz3gpGWUzq+mUAw9x0SYcKvddrc2c0kUZSSKi/7FWLP0OJlDZyCBFcl3msFWjwmwz0A==", "product"=>{"name"=>"Whey Protein", "type_of_suplement"=>"Proteínas", "benefits"=>"Fica grande", "contraindication"=>"Hipertensos", "brand"=>"Probiótica", "type_of_state"=>"Pó", "weight"=>"500 gramas", "desc"=>"O melhor suplemento do mundo!", "photo"=>#<ActionDispatch::Http::UploadedFile:0xb4e6b914 @tempfile=#<Tempfile:/tmp/RackMultipart20151123-5776-1wunlef.jpg>, @original_filename="wheyg2lbsoptimum_2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"wheyg2lbsoptimum_2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Guardar"}
+  [1m[35mAdmin Load (1.2ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+Command :: file -b --mime '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-5776-vz45ur.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-5776-18g2cli.jpg[0]' 2>/dev/null
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.2ms)
+
+Paperclip::Errors::CommandNotFoundError (Could not run the `identify` command. Please install ImageMagick.):
+  app/controllers/products_controller.rb:46:in `create'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 14:27:10 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.6ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 225ms (Views: 222.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:30:30 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:30:31 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.5ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:30:31.026224')[0m
+  [1m[35mStoreProduct Load (0.6ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 14:30:32 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (1.8ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 582ms (Views: 545.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 200.129.18.66 at 2015-11-23 14:30:40 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+  Rendered products/_form.html.erb (10.8ms)
+  Rendered products/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 263ms (Views: 205.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/products/new" for 200.129.18.66 at 2015-11-23 14:30:46 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+  Rendered products/_form.html.erb (4.1ms)
+  Rendered products/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 227ms (Views: 223.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 14:30:47 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/products" for 200.129.18.66 at 2015-11-23 14:31:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIFQ1pNGAF1q2sj027XZ8y+GRJR6Q70ooN6nLgrzz03hJ6Wc2094RbcahW3GKb8ycf+EOWmtJuFFYYNc7oPWag==", "product"=>{"name"=>"Whey Protein", "type_of_suplement"=>"Proteínas", "benefits"=>"Fica grande", "contraindication"=>"Hipertensos", "brand"=>"Probiótica", "type_of_state"=>"Pó", "weight"=>"500 gramas", "desc"=>"Melhor suplemento do mundo!", "photo"=>#<ActionDispatch::Http::UploadedFile:0xbcaeff6c @tempfile=#<Tempfile:/tmp/RackMultipart20151123-13783-17l632j.jpg>, @original_filename="wheyg2lbsoptimum_2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"wheyg2lbsoptimum_2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Guardar"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1[0m
+Command :: file -b --mime '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-13783-j9kvvu.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-13783-3i8iuc.jpg[0]' 2>/dev/null
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms)
+
+Paperclip::Errors::CommandNotFoundError (Could not run the `identify` command. Please install ImageMagick.):
+  app/controllers/products_controller.rb:46:in `create'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.7ms)
+
+
+Started POST "/products" for 200.129.18.66 at 2015-11-23 14:31:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIFQ1pNGAF1q2sj027XZ8y+GRJR6Q70ooN6nLgrzz03hJ6Wc2094RbcahW3GKb8ycf+EOWmtJuFFYYNc7oPWag==", "product"=>{"name"=>"Whey Protein", "type_of_suplement"=>"Proteínas", "benefits"=>"Fica grande", "contraindication"=>"Hipertensos", "brand"=>"Probiótica", "type_of_state"=>"Pó", "weight"=>"500 gramas", "desc"=>"Melhor suplemento do mundo!", "photo"=>#<ActionDispatch::Http::UploadedFile:0xbcb191f0 @tempfile=#<Tempfile:/tmp/RackMultipart20151123-13783-be1ebl.jpg>, @original_filename="wheyg2lbsoptimum_2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"wheyg2lbsoptimum_2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Guardar"}
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+Command :: file -b --mime '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-13783-wndm06.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-13783-1v8dvwx.jpg[0]' 2>/dev/null
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+Paperclip::Errors::CommandNotFoundError (Could not run the `identify` command. Please install ImageMagick.):
+  app/controllers/products_controller.rb:46:in `create'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.1ms)
+
+
+Started POST "/products" for 200.129.18.66 at 2015-11-23 14:34:25 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NIFQ1pNGAF1q2sj027XZ8y+GRJR6Q70ooN6nLgrzz03hJ6Wc2094RbcahW3GKb8ycf+EOWmtJuFFYYNc7oPWag==", "product"=>{"name"=>"Whey Protein", "type_of_suplement"=>"Proteínas", "benefits"=>"Fica grande", "contraindication"=>"Hipertensos", "brand"=>"Probiótica", "type_of_state"=>"Pó", "weight"=>"500 gramas", "desc"=>"Melhor suplemento do mundo!", "photo"=>#<ActionDispatch::Http::UploadedFile:0xbb0036cc @tempfile=#<Tempfile:/tmp/RackMultipart20151123-15209-1gzsbta.jpg>, @original_filename="wheyg2lbsoptimum_2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[photo]\"; filename=\"wheyg2lbsoptimum_2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Guardar"}
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+Command :: file -b --mime '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-15209-26vvn2.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-15209-zm9e16.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-15209-zm9e16.jpg[0]'
+Command :: convert '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-15209-zm9e16.jpg[0]' -auto-orient -resize "200x200" '/tmp/0b81bdb050629f2d73897031c436f81220151123-15209-13i1uj2'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-15209-zm9e16.jpg[0]' 2>/dev/null
+Command :: file -b --mime '/tmp/6a44e729fc5c7522477d4eab9ab8a57d20151123-15209-2gqomq.jpg'
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `products` (`name`, `type_of_suplement`, `benefits`, `contraindication`, `brand`, `weight`, `type_of_state`, `desc`, `photo_file_name`, `photo_content_type`, `photo_file_size`, `photo_updated_at`, `created_at`, `updated_at`) VALUES ('Whey Protein', 'Proteínas', 'Fica grande', 'Hipertensos', 'Probiótica', '500 gramas', 'Pó', 'Melhor suplemento do mundo!', 'wheyg2lbsoptimum_2.jpg', 'image/jpeg', 109147, '2015-11-23 19:34:25', '2015-11-23 19:34:25', '2015-11-23 19:34:25')
+  [1m[36m (1.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://iwheyapp.com.br:3000/products
+Completed 302 Found in 288ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/products" for 200.129.18.66 at 2015-11-23 14:34:25 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT  `admins`.* FROM `admins` WHERE `admins`.`id` = 1  ORDER BY `admins`.`id` ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `products`[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 469ms (Views: 464.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.dataTables.self-ca8b69b54533c581df13bbac94b03293b89ad1acfaad08e54ef2edcb89c66098.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-131f13015a9da63d8ed71f09b1c89ebd2fc8c81f1b2032430e06b8547d03f943.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:26 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/masks.self-27a8f356f341d2c9b0802118a8dc23f55f69bff6264d325eab94ede43f5d1d9a.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cidades-estados-1.2-utf8.self-9599223fec6884dae4c81e28d5c5ec4b4a5acf5890af7d7feb1fccb1c2811542.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/functions.self-e0722934d75b2793ab03cfd7f2a53697950a0c1cd8341e7fd29735186b86c38e.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskedinput.self-40152642fa81c1974b685e0645f99c36123765ea9efeca4d0c2abb188f0d99a0.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/addresses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-7307b9669198b2d94e4a9d53130aa0b3338c046287f5978e5f9621e2c02513e8.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.maskMoney.self-d7e112982a95b5f3ce54ba32be5cb55f03cc37eff2f597a1ee6d7ac92f2f7984.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.9ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.7ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.6ms)
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.4ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.0ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.svg" for 200.129.18.66 at 2015-11-23 14:34:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.svg"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.2ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/iwheyadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.1ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:37:38 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (1.3ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:37:38.052630')[0m
+  [1m[35mStoreProduct Load (0.5ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 52ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:37:38 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:41:48 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:41:48 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.2ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:41:48.618465')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:42:39 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.6ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:42:39.301305')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:42:39 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:43:37 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:43:37.933490')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:43:37 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:44:11 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:44:11 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.7ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:44:11.094528')
+  [1m[36mStoreProduct Load (0.6ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:46:37 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (1.0ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:46:37 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:46:37.399540')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:46:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (1.1ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:46:55.237780')[0m
+  [1m[35mStoreProduct Load (3.5ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:46:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:50:32 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:50:32 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:50:32.760125')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-23 14:52:35 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (1.9ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 240ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:54:40 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:54:40.134953')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:54:40 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.3ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:56:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:56:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.3ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:56:24.594070')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 14:56:45 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 19:56:45.021989')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:00:31 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.7ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:00:31 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.5ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:00:31.251876')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:13:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:13:55 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:13:55.880420')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:15:10 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:15:10 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.2ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:15:10.096799')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:17:29 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.6ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:17:29.407669')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:17:29 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.4ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:17:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.6ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:17:52.648879')
+  [1m[36mStoreProduct Load (0.4ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:17:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.4ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:18:01 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.3ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:18:01.539291')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/on_sale_percentages.json" for 200.129.18.66 at 2015-11-23 15:20:22 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OnSalePercentagesController#index as JSON
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:20:22.052172')
+  [1m[36mOnSalePercentage Load (0.2ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit > '2015-11-23 20:20:22.053662')[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:23:09 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (1.0ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:23:09 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.5ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:23:09.414990')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:23:21 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (2.9ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:23:21 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:23:21.638162')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:25:31 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (1.3ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:25:31 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:25:31.202236')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:25:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.5ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:25:52.790719')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:25:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:26:04 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:26:04 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:26:04.106746')[0m
+  [1m[35mStoreProduct Load (0.4ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:26:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:26:14 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:26:14.249904')
+  [1m[36mStoreProduct Load (0.4ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:27:36 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:27:36.205586')
+  [1m[36mStoreProduct Load (0.4ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:27:36 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:27:42 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:27:42 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:27:42.443428')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:27:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:27:52.780067')
+  [1m[36mStoreProduct Load (0.6ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:27:52 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.3ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:24 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.3ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:30:24.609981')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:34 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:30:34.963058')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:34 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.6ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:42 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.5ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:42 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.3ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:30:42.140918')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:59 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:30:59 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.3ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:30:59.751323')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:37:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mStore Load (0.6ms)[0m  [1mSELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:37:27 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mOnSalePercentage Load (0.4ms)[0m  SELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:37:27.386802')
+  [1m[36mStoreProduct Load (0.3ms)[0m  [1mSELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stores/find_nearest_stores?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:41:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoresController#find_nearest_stores as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[35mStore Load (0.5ms)[0m  SELECT `stores`.* FROM `stores` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza' AND `stores`.`active` = 1
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/store_products/find_more_valuable_products?country=Brasil&state=CE&city=Fortaleza" for 200.129.18.66 at 2015-11-23 15:41:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StoreProductsController#find_more_valuable_products as */*
+  Parameters: {"country"=>"Brasil", "state"=>"CE", "city"=>"Fortaleza"}
+  [1m[36mOnSalePercentage Load (0.4ms)[0m  [1mSELECT `on_sale_percentages`.* FROM `on_sale_percentages` WHERE (date_limit < '2015-11-23 20:41:51.997879')[0m
+  [1m[35mStoreProduct Load (0.3ms)[0m  SELECT `store_products`.* FROM `store_products` INNER JOIN `stores` ON `stores`.`id` = `store_products`.`store_id` INNER JOIN `addresses` ON `addresses`.`store_id` = `stores`.`id` WHERE `stores`.`active` = 1 AND `addresses`.`country` = 'Brasil' AND `addresses`.`state` = 'CE' AND `addresses`.`city` = 'Fortaleza'  ORDER BY `store_products`.`price` DESC
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 200.129.18.66 at 2015-11-24 12:23:49 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mStore Load (0.8ms)[0m  SELECT  `stores`.* FROM `stores` WHERE `stores`.`auth_token` IS NULL LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `clients`.* FROM `clients` WHERE `clients`.`auth_token` IS NULL LIMIT 1[0m
+Redirected to http://iwheyapp.com.br:3000/stores/sign_in
+Filter chain halted as :verify_store_or_store_json_or_admin_or_client_json rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-24 12:23:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (1.9ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 561ms (Views: 525.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/addresses.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.self-46e131c356d8a0bc1cb90a1377c8b454685ad79b55074513f108a04540b93b62.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dataTables.bootstrap.min.self-cfce00f125355d734defa97b63eafae73bcc6318060f8bf9c2a83dd08db83ebc.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_bootstrap.self-d3955c5163601cb56be405bec5625307afcfea1c33632433f99a67661d852ff7.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:50 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/style.self-b55a0f1a9968e2e012435adb0b17bdbaf6ad107f664fb14bbffc445cb19f6e1b.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a9a0fd18e24cbe6cc26bc57726957c99f421cf901fc9bca640c113ff4654b96b.css?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_store.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/form_of_payment_of_stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/on_sale_percentages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/store_products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/iwhey-0fe3b7ca5fa9554b8a28950b123963aa05cc2f3b3fda26575fdf081c6c92d820.jpg" for 200.129.18.66 at 2015-11-24 12:23:51 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-24 12:23:54 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.5ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 201ms (Views: 197.2ms | ActiveRecord: 0.0ms)
