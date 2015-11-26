@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(version: 20151125123214) do
 
   create_table "products", force: :cascade do |t|
     t.string   "type_of_suplement",  limit: 255,   default: "", null: false
-    t.text     "desc",               limit: 65535
+    t.text     "desc",               limit: 65535,              null: false
     t.string   "benefits",           limit: 255,   default: "", null: false
     t.string   "contraindication",   limit: 255,   default: "", null: false
     t.string   "name",               limit: 255,   default: "", null: false
