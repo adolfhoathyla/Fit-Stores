@@ -1,0 +1,30 @@
+---
+pid: 19742
+config: !ruby/object:Puma::Configuration
+  cli_options: 
+  conf: 
+  options:
+    :min_threads: 1
+    :max_threads: 6
+    :quiet: false
+    :debug: false
+    :binds:
+    - unix:///home/iwheyadmin/iwheyweb/shared/sockets/puma.sock
+    :workers: 1
+    :daemon: false
+    :mode: :http
+    :before_fork: []
+    :worker_timeout: 60
+    :worker_boot_timeout: 60
+    :worker_shutdown_timeout: 30
+    :environment: production
+    :redirect_stdout: "/home/iwheyadmin/iwheyweb/shared/log/puma.stdout.log"
+    :redirect_stderr: "/home/iwheyadmin/iwheyweb/shared/log/puma.stderr.log"
+    :redirect_append: true
+    :pidfile: "/home/iwheyadmin/iwheyweb/shared/pids/puma.pid"
+    :state: "/home/iwheyadmin/iwheyweb/shared/pids/puma.state"
+    :control_url: unix:///tmp/puma-status-1448463625370-19742
+    :config_file: config/puma.rb
+    :control_url_temp: "/tmp/puma-status-1448463625370-19742"
+    :control_auth_token: 9cf2675a50b0ff12eebddd3d4c7689e
+    :tag: iwheyweb

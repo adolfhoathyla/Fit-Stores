@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120113701) do
+ActiveRecord::Schema.define(version: 20151125123214) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country",      limit: 255
@@ -117,15 +117,15 @@ ActiveRecord::Schema.define(version: 20151120113701) do
   add_index "product_suggestions", ["store_id"], name: "index_product_suggestions_on_store_id", using: :btree
 
   create_table "products", force: :cascade do |t|
-    t.string   "type_of_suplement",  limit: 255, default: "", null: false
-    t.string   "desc",               limit: 255, default: "", null: false
-    t.string   "benefits",           limit: 255, default: "", null: false
-    t.string   "contraindication",   limit: 255, default: "", null: false
-    t.string   "name",               limit: 255, default: "", null: false
-    t.string   "brand",              limit: 255, default: "", null: false
-    t.string   "weight",             limit: 255, default: "", null: false
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.string   "type_of_suplement",  limit: 255,   default: "", null: false
+    t.text     "desc",               limit: 65535
+    t.string   "benefits",           limit: 255,   default: "", null: false
+    t.string   "contraindication",   limit: 255,   default: "", null: false
+    t.string   "name",               limit: 255,   default: "", null: false
+    t.string   "brand",              limit: 255,   default: "", null: false
+    t.string   "weight",             limit: 255,   default: "", null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
     t.string   "photo_file_name",    limit: 255
     t.string   "photo_content_type", limit: 255
     t.integer  "photo_file_size",    limit: 4

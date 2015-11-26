@@ -2,11 +2,11 @@
   <div class="col-xs-8 col-md-6">
     <h1><strong>Informações Da Loja</strong></h1>
     <div class="box">
-
+    <% if admin_signed_in? %>
       <div class="field">
         <%= link_to "Vendas Da Loja", sales_path(store_id: @store_id, status: "Aguardando Envio Pela Loja", month: Time.now.month, year: Time.now.year), class:"btn be-red white", data: { no_turbolink: true }  %>
       </div>
-
+    <% end %>
       <div class="field">
         <%= link_to "Produtos Da Loja", store_products_path(:store_id => @store.id), class:"btn be-red white" %>
       </div>

@@ -22578,3 +22578,809 @@ Completed 200 OK in 200ms (Views: 199.1ms | ActiveRecord: 0.0ms)
 >>>>>>> 7759416f3900d56db6973ad562d3608499bd91b2
 >>>>>>> 617c4f07a385f55a61534dc515f10ec340246eff
 >>>>>>> 2c3972226590476a443ea7ebed81914645a35f29
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-24 12:26:19 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (2.2ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 620ms (Views: 564.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/stores/sign_in" for 200.129.18.66 at 2015-11-24 12:26:22 -0500
+Cannot render console from 200.129.18.66! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Stores::SessionsController#new as HTML
+  Rendered stores/shared/_links.html.erb (0.5ms)
+  Rendered stores/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 222ms (Views: 220.3ms | ActiveRecord: 0.0ms)
+  [1m[36mAdmin Load (4.7ms)[0m  [1mSELECT `admins`.* FROM `admins`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20151125123214')[0m
+  [1m[35m (4.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'addresses'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `addresses`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'admins'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'clients'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `clients`[0m
+  [1m[35m (0.5ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payment_of_stores'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `form_of_payment_of_stores`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payments'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `form_of_payments`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'on_sale_percentages'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `on_sale_percentages`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'product_suggestions'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `product_suggestions`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'products'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `products`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sale_products'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `sale_products`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sales'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `sales`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'store_products'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `store_products`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'stores'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `stores`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'addresses'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `addresses`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'clients'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `clients`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payment_of_stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `form_of_payment_of_stores`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payments'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `form_of_payments`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'on_sale_percentages'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `on_sale_percentages`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'product_suggestions'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `product_suggestions`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sale_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sale_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sales'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sales`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'store_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `store_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `stores`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[36mSQL (6.5ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20151125123214'[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'addresses'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `addresses`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'clients'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `clients`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payment_of_stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `form_of_payment_of_stores`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payments'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `form_of_payments`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'on_sale_percentages'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `on_sale_percentages`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'product_suggestions'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `product_suggestions`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sale_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sale_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sales'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sales`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'store_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `store_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `stores`
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20151125123214')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.4ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'addresses'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `addresses`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'admins'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `admins`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'clients'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `clients`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payment_of_stores'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `form_of_payment_of_stores`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payments'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `form_of_payments`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'on_sale_percentages'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `on_sale_percentages`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'product_suggestions'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `product_suggestions`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'products'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `products`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sale_products'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `sale_products`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sales'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `sales`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'store_products'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `store_products`[0m
+  [1m[35m (0.3ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'stores'
+
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `stores`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[36mSQL (6.0ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20151125123214'[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'addresses'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `addresses`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'clients'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `clients`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payment_of_stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `form_of_payment_of_stores`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payments'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `form_of_payments`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'on_sale_percentages'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `on_sale_percentages`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'product_suggestions'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `product_suggestions`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sale_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sale_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sales'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sales`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'store_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `store_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `stores`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (1.1ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.8ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.6ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.5ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.5ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (0.6ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeLimitToDescFromProducts (20151125123214)
+  [1m[35m (14.8ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT NULL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20151125123214')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'addresses'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `addresses`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'admins'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `admins`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'clients'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `clients`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payment_of_stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `form_of_payment_of_stores`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'form_of_payments'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `form_of_payments`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'on_sale_percentages'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `on_sale_percentages`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'product_suggestions'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `product_suggestions`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sale_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sale_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'sales'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `sales`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'store_products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `store_products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'db/development'
+  AND fk.table_name = 'stores'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `stores`
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeColumnDescDefaultAndNullToProducts (20151125131520)
+  [1m[35m (17.9ms)[0m  ALTER TABLE `products` CHANGE `desc` `desc` text NOT NULL
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL[0m
+Mysql2::Error: BLOB/TEXT column 'desc' can't have a default value: ALTER TABLE `products` CHANGE `desc` `desc` text DEFAULT '' NOT NULL
