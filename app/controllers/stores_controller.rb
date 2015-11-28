@@ -263,20 +263,44 @@ class StoresController < ApplicationController
     country = params[:country]
     state = params[:state]
     city = params[:city]
+
+    user_latitude = params[:latitude]
+    user_longitude = params[:longitude]
+
     @stores = Array.new
+
+    all_stores = Array.new
+
     if country != nil
       if state != nil
         if city != nil
-          @stores = Store.joins(:address).where(addresses:{country:country,state:state,city:city},stores:{active:true})
+          all_stores = Store.joins(:address).where(addresses:{country:country,state:state,city:city},stores:{active:true})
         else
-          @stores = Store.joins(:address).where(addresses:{country:country,state:state},stores:{active:true})
+          all_stores = Store.joins(:address).where(addresses:{country:country,state:state},stores:{active:true})
         end
       else
-        @stores = Store.joins(:address).where(addresses:{country:country},stores:{active:true})
+        all_stores = Store.joins(:address).where(addresses:{country:country},stores:{active:true})
       end
     end
 
-  respond_to do |format|
+    all_stores.each do |store|
+
+      if store.global_store
+        @stores << store
+
+      else 
+
+        address = Address.find_by_store_id(store.id)
+        distance = Geocoder::Calculations.distance_between([address.latitude,address.longitude], [user_latitude,user_longitude])
+
+        if distance <= 5.0
+          @stores << store
+        end
+
+      end
+    end
+
+    respond_to do |format|
       format.json {render json: { store: @stores.map {|s| [store: s.attributes, store_photo: s.photo, store_products: s.store_products, address: Address.find_by_store_id(s.id),  forms_of_payment_of_store: s.form_of_payment_of_stores.map { |fps| {form_of_payment: FormOfPayment.find(fps.form_of_payment_id)} }]}}}
     end
   end
