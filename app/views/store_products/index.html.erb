@@ -16,10 +16,12 @@
             <th>Preço(R$)</th>
             <th>Oferta(R$)</th>
             <th>Desconto(%)</th>
-            <% if store_signed_in? %> 
-              <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+            <% if admin_signed_in? %> 
               <th>Adicionar Promoção</th>
               <th>Excluir Promoção</th>
+            <% end %>
+            <% if store_signed_in? %> 
+              <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
               <th>Editar</th>
               <th>Excluir</th>
               <% end %>
@@ -55,20 +57,16 @@
                 <% if store_product.on_sale_percentage != nil %>
                   <td align="left">R$<%= priceDiscount %></td>
                   <td align="left"><%= percentage %>%</td>
-                  <% if store_signed_in? %> 
-                    <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+                  <% if admin_signed_in? %> 
                   <td align="left"><%= link_to "Editar Promoção", edit_on_sale_percentage_path(store_product), class: "red", data: { no_turbolink: true } %></td>
                   <td align="left"><%= link_to "Excluir Promoção", store_product.on_sale_percentage, class: "red", method: :delete %></td>
-                    <% end %>
                   <% end %>
                 <% else %>
                   <td align="left">R$<%= price %></td>
                   <td align="left">0,00%</td>
-                  <% if store_signed_in? %> 
-                    <% if current_store.id == params[:store_id].to_i or params[:store_id] == nil %>
+                  <% if admin_signed_in? %> 
                   <td align="left"><%= link_to "Criar Promoção", new_on_sale_percentage_path(store_product_id: store_product.id), class: "red", data: { no_turbolink: true } %></td>
                   <td align="left"></td>
-                    <% end %>
                   <% end %>
                 <% end %>
                 <% if store_signed_in? %> 

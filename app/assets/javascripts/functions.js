@@ -40,4 +40,5 @@ function onClickTypeOfState () {
 
 $(document).ready(function() {
     $('#tabela').DataTable();
+    $('#tabela2').DataTable();
 } );

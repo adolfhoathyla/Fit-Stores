@@ -1,6 +1,6 @@
 class OnSalePercentagesController < ApplicationController
 	
-	before_action :verify_store_or_store_json, only: [:new, :create, :edit, :update, :destroy]
+	before_action :verify_admin, only: [:new, :create, :edit, :update, :destroy]
 	#before_action :verify_client_json, only: [:index]
 
 	def index
@@ -18,11 +18,8 @@ class OnSalePercentagesController < ApplicationController
 	    if @store_product == nil 
 	    	redirect_to store_products_path, alert: "Não existe nenhum produto com esse id na loja"
 	    	return
-	    elsif @store_product.store != current_store
-	    	redirect_to store_products_path, alert: "Esse produto nao é seu"
-	    	return
 	    end
-	    numeroDePromocoesDaLoja = StoreProduct.joins(:store).where(stores:{id:current_store.id}).where("on_sale_percentage_id is not null").count
+	    numeroDePromocoesDaLoja = StoreProduct.joins(:store).where(stores:{id:@store_product.store.id}).where("on_sale_percentage_id is not null").count
 	    if numeroDePromocoesDaLoja >= 5
 	    	redirect_to store_products_path, alert: "Você excedeu o limite de promoções, por favor, exclua alguma para adicionar outra."
 	    	return
@@ -61,9 +58,6 @@ class OnSalePercentagesController < ApplicationController
 	    if @store_product == nil 
 	    	redirect_to store_products_path, alert: "Não existe nenhum produto com esse id na loja"
 	    	return
-	    elsif @store_product.store != current_store
-	    	redirect_to store_products_path, alert: "Esse produto nao é seu"
-	    	return
 	    end
 		@on_sale_percentage = @store_product.on_sale_percentage
 	end
@@ -98,8 +92,8 @@ class OnSalePercentagesController < ApplicationController
 		redirect_to store_products_path, notice: "Promoção Excluída Com Sucesso!"
 	end
 
-	def verify_store_or_store_json
-	    if current_store == nil and current_store_json == nil
+	def verify_admin
+	    if current_admin == nil
 	    	redirect_to new_store_session_path, alert: "Você Não Pode Acessar Essa Página!"
    		end
   	end
