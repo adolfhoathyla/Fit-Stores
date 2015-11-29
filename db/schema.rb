@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151126194218) do
+=======
+ActiveRecord::Schema.define(version: 20151128151423) do
+>>>>>>> 74e2a364a83a9e03b6440cea9d98797e3939d49a
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country",      limit: 255
@@ -212,6 +216,7 @@ ActiveRecord::Schema.define(version: 20151126194218) do
     t.string   "auth_token",                limit: 255, default: ""
     t.boolean  "active",                                default: false
     t.float    "value_per_km",              limit: 24
+    t.boolean  "global_store"
   end
 
   add_index "stores", ["auth_token"], name: "index_stores_on_auth_token", unique: true, using: :btree
