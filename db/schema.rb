@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125123214) do
+ActiveRecord::Schema.define(version: 20151126194218) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country",      limit: 255
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20151125123214) do
     t.string   "photo_content_type",     limit: 255
     t.integer  "photo_file_size",        limit: 4
     t.datetime "photo_updated_at"
+    t.string   "cpf",                    limit: 255
   end
 
   add_index "clients", ["auth_token"], name: "index_clients_on_auth_token", unique: true, using: :btree
@@ -118,7 +119,7 @@ ActiveRecord::Schema.define(version: 20151125123214) do
 
   create_table "products", force: :cascade do |t|
     t.string   "type_of_suplement",  limit: 255,   default: "", null: false
-    t.text     "desc",               limit: 65535,              null: false
+    t.text     "desc",               limit: 65535
     t.string   "benefits",           limit: 255,   default: "", null: false
     t.string   "contraindication",   limit: 255,   default: "", null: false
     t.string   "name",               limit: 255,   default: "", null: false
