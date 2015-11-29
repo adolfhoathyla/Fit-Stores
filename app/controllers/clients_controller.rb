@@ -27,8 +27,8 @@ class ClientsController < ApplicationController
 	#   super
     #INSERT INTO
     @client = Client.new(name: params[:client][:name], telephone: params[:client][:telephone], 
-    					           birth_date: params[:client][:birth_date], email: params[:client][:email], 
-                       	 password: params[:client][:password])
+    					           birth_date: params[:client][:birth_date], cpf: params[:client][:cpf], 
+                         email: params[:client][:email], password: params[:client][:password])
     @client.decode_cover_image_data(params[:client][:photo])
 
     if @client.save
@@ -58,7 +58,7 @@ class ClientsController < ApplicationController
       @client.decode_cover_image_data(params[:client][:photo])
       if @client.update(name: params[:client][:name], telephone: params[:client][:telephone], 
     					          birth_date: params[:client][:birth_date], email: params[:client][:email], 
-                        password: params[:client][:password])
+                        cpf: params[:client][:cpf], password: params[:client][:password])
         render json: [client: @client.attributes, client_photo: @client.photo], status: 200
       else
         render json: { errors: @client.errors }, status: 422
