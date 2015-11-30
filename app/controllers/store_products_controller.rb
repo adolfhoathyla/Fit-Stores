@@ -140,28 +140,55 @@ class StoreProductsController < ApplicationController
     user_longitude = params[:longitude]
 
     @store_products = Array.new
-    #all_store_products = Array.new
+    all_store_products = Array.new
 
     if country != nil
       if state != nil
         if city != nil
-          @store_products = StoreProduct.joins(:store => :address).where(addresses:{country:country,state:state,city:city},stores:{active:true})
+          all_store_products = StoreProduct.joins(:store => :address).where(addresses:{country:country,state:state,city:city},stores:{active:true}).limit(10)
         else
-          @store_products = StoreProduct.joins(:store => :address).where(addresses:{country:country,state:state},stores:{active:true})
+          all_store_products = StoreProduct.joins(:store => :address).where(addresses:{country:country,state:state},stores:{active:true}).limit(10)
         end
       else
-        @store_products = StoreProduct.joins(:store => :address).where(addresses:{country:country},stores:{active:true})
+        all_store_products = StoreProduct.joins(:store => :address).where(addresses:{country:country},stores:{active:true}).limit(10)
       end
     end
 
-    #all_store_products.each do |store_product|
-    #  address = Address.find_by_store_id(store_product.store_id)
-    #  distance = Geocoder::Calculations.distance_between([address.latitude,address.longitude], [user_latitude,user_longitude])
+    all_store_products.each do |store_product|
 
-    #  if distance <= 10.0
-    #    @store_products << store_product
-    #  end
-    #end
+      store = Store.find(store_product.store_id)
+      if store.global_store 
+
+        if @store_products.empty?
+          @store_products << store_product
+        else
+          @store_products.each do |store_product_tmp|
+            if store_product_tmp.product_id != store_product.product_id
+              @store_products << store_product
+            end
+          end
+        end
+
+      else
+
+        address = Address.find_by_store_id(store_product.store_id)
+        distance = Geocoder::Calculations.distance_between([address.latitude,address.longitude], [user_latitude,user_longitude])
+
+        if distance <= 5.0
+          if @store_products.empty?
+            @store_products << store_product
+          else
+            @store_products.each do |store_product_tmp|
+              if store_product_tmp.product_id != store_product.product_id
+                @store_products << store_product
+              end
+            end
+          end
+          
+        end
+
+      end
+    end
 
     render json: @store_products.map {|sp| [store_product: sp.attributes, product: sp.product.attributes, product_photo: sp.product.photo, store: sp.store.attributes, store_photo: sp.store.photo, address: Address.find_by_store_id(sp.store.id), on_sale_percentage: sp.on_sale_percentage, forms_of_payment_of_store: sp.store.form_of_payment_of_stores.map { |fps| {form_of_payment: FormOfPayment.find(fps.form_of_payment_id)} }]}
   end
