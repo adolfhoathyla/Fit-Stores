@@ -50,6 +50,18 @@ class ProductsController < ApplicationController
                            desc: params[:product][:desc], photo: photo)
     
     if @product.save
+
+      flavors = params[:flavors][:ids_flavors]
+
+      flavors.each { |id|
+        if id != "" && id != "0"
+          product_flavor = ProductFlavor.new
+          product_flavor.product = @product
+          product_flavor.flavor = Flavor.find(id)
+          product_flavor.save
+        end
+      }
+
       redirect_to products_path, notice: "Produto com nome '#{@product.name}' criado com sucesso"
     else
       redirect_to new_product_path, alert: @product.errors.full_messages
@@ -74,6 +86,22 @@ class ProductsController < ApplicationController
     if photo.blank?
       photo = @product.photo
     end
+
+    product_flavors = ProductFlavor.where("product_id = ?", @product.id)
+    product_flavors.each do |pf|
+      pf.delete
+    end
+
+    flavors = params[:flavors][:ids_flavors]
+
+    flavors.each { |id|
+      if id != "" && id != "0"
+        product_flavor = ProductFlavor.new
+        product_flavor.product = @product
+        product_flavor.flavor = Flavor.find(id)
+        product_flavor.save
+      end
+    }
 
     if @product.update(name: params[:product][:name], type_of_suplement: params[:product][:type_of_suplement], 
                        benefits: params[:product][:benefits], 

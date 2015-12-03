@@ -5,14 +5,12 @@
       <table id="tabela" class="table table-striped table-bordered" cellspacing="0">
         <thead>
           <tr>
-            <th>Loja</th>
             <th>Nome</th>
             <th>Tipo</th>
-            <th>Benefícios</th>
-            <th>Contraindicações</th>
             <th>Marca</th>
             <th>Peso</th>
             <th>Foto</th>
+            <th>Sabores disponíveis</th>
             <th>Preço(R$)</th>
             <th>Oferta(R$)</th>
             <th>Desconto(%)</th>
@@ -33,14 +31,24 @@
           <% if @store_products.count > 0 %>
             <% @store_products.each do |store_product| %>
               <tr>
-                <td align="left"><%= store_product.store.name %></td>
                 <td align="left"><%= store_product.product.name %></td>
                 <td align="left"><%= store_product.product.type_of_suplement %></td>
-                <td align="left"><%= store_product.product.benefits %></td>
-                <td align="left"><%= store_product.product.contraindication %></td>
                 <td align="left"><%= store_product.product.brand %></td>
                 <td align="left"><%= store_product.product.weight %></td>
                 <td align="left"><%= image_tag store_product.product.photo.url(), size: "100" %></td>
+
+                <td align="left">
+         
+                <%  product_flavors = StoreProductFlavor.where("store_product_id = ?", store_product.id) %>
+
+                  <% product_flavors.each do |pf|
+                    sabor = Flavor.find(pf.flavor_id) %>
+                    <%= sabor.desc %>
+                    <p/>
+                  <% end %>
+        
+                </td>
+
                 <% 
                     price = sprintf("%.02f" , store_product.price)
                     price["."] = ","

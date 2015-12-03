@@ -55,6 +55,22 @@
           <div class="field">
             <%= f.text_field :price, class:"form-control", required: true, type: "price", placeholder: "Valor", value: price_string %>
           </div>
+
+          <div class="field"> <p/>
+          <strong>Sabores:</strong> <p/>
+            <%  product_flavors = ProductFlavor.where("product_id = ?", @store_product.product_id) %>
+            <%= fields_for :flavors do |flavor| %>
+                <% product_flavors.each do |pf|
+                    sabor = Flavor.find(pf.flavor_id) %>
+                    <% puts sabor.desc %>
+                    <%= flavor.check_box(:ids_flavors, { :multiple => true }, sabor.id) %>
+                    <%= flavor.label :ids_flavors, sabor.desc %>
+                    <p/>
+                <% end %>
+            <% end %>
+        
+          </div>
+
         <% end %>
         <div class="field text">
           <%= f.submit :Editar, class:"btn be-red white" %>

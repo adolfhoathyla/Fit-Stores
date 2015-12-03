@@ -39,6 +39,22 @@
 			<div class="field">
 				<%= f.text_field :weight, required: true, class:"form-control", placeholder: "Peso", type: "po" %>
 			</div>
+
+
+        	<h2> Sabores: </h2>
+        	<%= fields_for :flavors do |flavor| %>
+
+          	<% Flavor.all.each do |fl| %>
+            	<div class="field">
+              	<%= flavor.check_box(:ids_flavors, { :multiple => true }, fl.id) %>
+              	<%= flavor.label :ids_flavors, fl.desc %>
+            	</div>
+          	<% end %>
+          
+        <% end %>
+
+
+			</div>
 			<div class="field">
 				<%= f.text_area :desc, required: true, class:"form-control", placeholder: "Descrição" %>
 			</div>

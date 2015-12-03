@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128151423) do
+ActiveRecord::Schema.define(version: 20151202185249) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "country",      limit: 255
@@ -80,6 +80,12 @@ ActiveRecord::Schema.define(version: 20151128151423) do
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
   add_index "clients", ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true, using: :btree
 
+  create_table "flavors", force: :cascade do |t|
+    t.string   "desc",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "form_of_payment_of_stores", force: :cascade do |t|
     t.integer  "form_of_payment_id", limit: 4
     t.integer  "store_id",           limit: 4
@@ -103,6 +109,16 @@ ActiveRecord::Schema.define(version: 20151128151423) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "product_flavors", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "flavor_id",  limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "product_flavors", ["flavor_id"], name: "index_product_flavors_on_flavor_id", using: :btree
+  add_index "product_flavors", ["product_id"], name: "index_product_flavors_on_product_id", using: :btree
 
   create_table "product_suggestions", force: :cascade do |t|
     t.string   "name",               limit: 255, null: false
@@ -167,6 +183,16 @@ ActiveRecord::Schema.define(version: 20151128151423) do
   add_index "sales", ["form_of_payment_id"], name: "index_sales_on_form_of_payment_id", using: :btree
   add_index "sales", ["store_id"], name: "index_sales_on_store_id", using: :btree
 
+  create_table "store_product_flavors", force: :cascade do |t|
+    t.integer  "store_product_id", limit: 4
+    t.integer  "flavor_id",        limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "store_product_flavors", ["flavor_id"], name: "index_store_product_flavors_on_flavor_id", using: :btree
+  add_index "store_product_flavors", ["store_product_id"], name: "index_store_product_flavors_on_store_product_id", using: :btree
+
   create_table "store_products", force: :cascade do |t|
     t.float    "price",                 limit: 24
     t.integer  "store_id",              limit: 4
@@ -221,8 +247,12 @@ ActiveRecord::Schema.define(version: 20151128151423) do
 
   add_foreign_key "form_of_payment_of_stores", "form_of_payments"
   add_foreign_key "form_of_payment_of_stores", "stores"
+  add_foreign_key "product_flavors", "flavors"
+  add_foreign_key "product_flavors", "products"
   add_foreign_key "sale_products", "products"
   add_foreign_key "sale_products", "sales"
+  add_foreign_key "store_product_flavors", "flavors"
+  add_foreign_key "store_product_flavors", "store_products"
   add_foreign_key "store_products", "on_sale_percentages"
   add_foreign_key "store_products", "products"
   add_foreign_key "store_products", "stores"

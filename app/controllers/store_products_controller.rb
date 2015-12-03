@@ -52,6 +52,18 @@ class StoreProductsController < ApplicationController
                                                       store_id: current_store.id)
     @store_product.product = @product
     if @store_product.save
+
+      flavors = params[:flavors][:ids_flavors]
+
+      flavors.each { |id|
+        if id != "" && id != "0"
+          store_product_flavor = StoreProductFlavor.new
+          store_product_flavor.store_product = @store_product
+          store_product_flavor.flavor = Flavor.find(id)
+          store_product_flavor.save
+        end
+      }
+
       redirect_to new_store_product_path, notice: "Criado produto para loja '#{current_store.name}'"
     else
       redirect_to new_store_product_path, alert: "Não Foi Criado produto para loja '#{current_store.name}'"
@@ -71,6 +83,23 @@ class StoreProductsController < ApplicationController
     if price.count('R$ ') > 0
       price["R$ "] = ""
     end
+
+    store_product_flavors = StoreProductFlavor.where("store_product_id = ?", @store_product.id)
+    store_product_flavors.each do |spf|
+      spf.delete
+    end
+
+    flavors = params[:flavors][:ids_flavors]
+
+    flavors.each { |id|
+      if id != "" && id != "0"
+        store_product_flavor = StoreProductFlavor.new
+        store_product_flavor.store_product = @store_product
+        store_product_flavor.flavor = Flavor.find(id)
+        store_product_flavor.save
+      end
+    }
+
     if @store_product.update_columns(price: price)
       redirect_to store_products_path, notice: "Editado produto para loja '#{current_store.name}'"
     else

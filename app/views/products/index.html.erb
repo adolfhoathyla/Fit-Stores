@@ -14,6 +14,7 @@
             <th>Contraindicações</th>
             <th>Marca</th>
             <th>Peso</th>
+            <th>Sabores existentes</th>
             <th>Foto</th>
             <% if admin_signed_in? %>
             <th>Editar</th>
@@ -33,6 +34,20 @@
                 <td align="left"><%= product.contraindication %></td>
                 <td align="left"><%= product.brand %></td>
                 <td align="left"><%= product.weight %></td>
+
+
+                <td align="left">
+         
+                <%  product_flavors = ProductFlavor.where("product_id = ?", product.id) %>
+
+                  <% product_flavors.each do |pf|
+                    sabor = Flavor.find(pf.flavor_id) %>
+                    <%= sabor.desc %>
+                    <p/>
+                  <% end %>
+        
+                </td>
+
                 <td align="left"><%= image_tag product.photo.url(), size: "100" %></td>
                 <% if admin_signed_in? %>
                 <td align="left"><%= link_to "Editar", edit_product_path(product), class:"red" %></td>
